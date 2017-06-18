@@ -8,11 +8,13 @@ import {InputTextModule} from 'primeng/primeng';
 import { AppComponent } from './app.component';
 import {AddLink} from './add-link/AddLink.component';
 import {ButtonModule} from 'primeng/primeng';
+import {LinkList} from './link-list/LinkList'
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddLink
+    AddLink,
+    LinkList
   ],
   imports: [
     BrowserModule,
