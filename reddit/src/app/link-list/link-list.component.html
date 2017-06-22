@@ -3,8 +3,14 @@
 <div *ngFor="let article of articles" class="ui-g" style=" font-size: 15px">
     <div class="ui-g-2"></div>
     <div class="ui-g-8">
-            <p-panel header="{{article.title}}" [toggleable]="true" [style]="{'margin-bottom':'20px'}"  >
+            <p-panel header="{{article.title}}"  [style]="{'margin-bottom':'20px'}"  >
+<p-header style="float:right ">
+        <button pButton type="button" icon="fa-thumbs-o-up" label="{{article.upvotes}}" (click)="upvote(article)" class="ui-button-info"></button>
+        <button pButton type="button" icon="fa-thumbs-o-down" label="{{article.downvotes}}" (click)="downvote(article)" class="ui-button-danger"></button>
+     </p-header>
+ 
 {{article.link}}
+
 </p-panel>
     </div>
     <div class="ui-g-2"></div>

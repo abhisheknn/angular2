@@ -1,6 +1,8 @@
-import {Article} from '../article/Article'
-import {Articles} from '../articles/Articles'
+import {Article} from '../article/Article';
+import {Articles} from '../articles/Articles';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class ArticlesFactory{
 
 private static  _instance:ArticlesFactory = new ArticlesFactory();
@@ -20,7 +22,7 @@ return ArticlesFactory._instance.articles;
 
 }
 
-static getArticles():Article[]{
+getArticles():Article[]{
 return  ArticlesFactory._instance.createArticles();
 }
 }

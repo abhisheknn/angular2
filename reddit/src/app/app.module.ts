@@ -8,7 +8,9 @@ import {InputTextModule} from 'primeng/primeng';
 import { AppComponent } from './app.component';
 import {AddLink} from './add-link/AddLink.component';
 import {ButtonModule} from 'primeng/primeng';
-import {LinkList} from './link-list/LinkList'
+import {LinkList} from './link-list/LinkList';
+import {ArticlesOps}  from './models/articles/ArticlesOps';
+import {ArticlesFactory}  from './models/articles/ArticlesFactory';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import {LinkList} from './link-list/LinkList'
    BrowserAnimationsModule,
    ButtonModule
   ],
-  providers: [],
+  providers: [{provide:ArticlesOps,useClass:ArticlesOps},{provide:ArticlesFactory,useClass:ArticlesFactory}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

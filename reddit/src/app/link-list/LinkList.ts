@@ -9,9 +9,22 @@ import {ArticlesFactory} from '../models/articles/ArticlesFactory'
 })
 
 export class LinkList implements OnInit{
- articles:Article[] = ArticlesFactory.getArticles();
+constructor(private articlesFactory:ArticlesFactory){
+
+}
+ articles:Article[] = this.articlesFactory.getArticles();
  ngOnInit(){
 
-    }
+}
+
+upvote(article:Article){
+article.upvotes=1;
+//console.log(article);
+}
+downvote(article:Article){
+    
+    article.downvotes=1;
+  //     console.log(article);
+}
 }
 

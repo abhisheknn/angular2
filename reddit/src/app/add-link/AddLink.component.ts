@@ -8,11 +8,16 @@ import {Article} from '../models/article/Article'
 })
 
 export class AddLink implements OnInit{
+     articlesOps:ArticlesOps;
+
+    constructor(articlesOps:ArticlesOps){
+        this.articlesOps=articlesOps;
+    }
 
     addArticle(title:HTMLInputElement,link:HTMLInputElement):boolean
     {
-          let  article:Article = new Article(title.value,link.value);
-          new ArticlesOps().addArticle(article);
+          let  article:Article = new Article(title.value,link.value,0);
+          this.articlesOps.addArticle(article);
         return true;
     }
 
