@@ -1,0 +1,21 @@
+.ui-inputtext{
+    width:380px;
+    height:25px;
+    font-size: 10px;
+    margin-top: 10px;
+    }
+
+  .ui-button{
+       margin-top: 10px;
+       height:35px;
+         width:380px;
+   }
+
+
+  .ui-panel-titlebar{
+      font-size: 15px;
+  } 
+
+ .ui-button-text-only .ui-button-text{
+       font-size: 17px;
+   } 
